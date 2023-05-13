@@ -1,0 +1,108 @@
+{{>header}}
+<style>
+    nav {
+        background-color: rgba(51, 51, 51, 0); 
+        border-top: none;
+        padding-top: 50px;
+    }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+
+        nav li {
+            display: table-cell;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+            border-top: 1px solid #fff;
+            border-bottom: none;
+        }
+
+            nav li:last-child {
+                border-right: none;
+            }
+
+            nav li a {
+                display: block;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+            }
+
+            nav li:hover {
+                background-color: #fff;
+            }
+
+                nav li:hover a {
+                    color: #333;
+                }
+
+    .return-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(51, 51, 51, 0);
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #fff;
+        border-radius: 5px;
+    }
+
+        .return-button:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+    input[type="text"] {
+        padding: 5px;
+        border: 1px solid #fff;
+        border-radius: 5px 0 0 5px;
+        background-color: transparent;
+        color: #fff;
+        width: 375px; /* Updated width */
+    }
+</style>
+
+{{> navAdministrador}}
+    <div class="contenedor">
+       
+    <br />
+
+     <div class="search-container">
+        
+            <input type="text" class="input-search" name="id" id="id" value="0" placeholder="ID Usuario...">
+            
+        
+            <input type="text" class="input-search" name="fecha" id="fecha" placeholder="Fecha..."><br>
+            <button id="btnBuscar">Buscar</button>
+        
+    </div>
+
+    <div class="table">
+        <table id="tabla-asistencias">
+            <tr name="titulos">
+                <td>IdEmpleado</td>
+                <td>Lat</td>
+                <td>Lon</td>
+                <td>Fecha</td>
+                <td>Hora</td>
+                <td>Tipo</td>
+            </tr>
+            
+        </table>
+    </div>
+
+    </div>
+   
+
+<script src="js/asistencias.js"></script>   
+{{> footer}}

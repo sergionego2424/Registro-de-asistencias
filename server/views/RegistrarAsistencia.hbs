@@ -1,0 +1,28 @@
+{{>header}}
+
+<script src="js/data.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZjRe8THSIemTT0xOxzuaoIBtSbvtvaVw&callback=initMap"
+    type="text/javascript"></script>
+<script src="js/map.js"></script>
+
+
+<span style="display:none;" id="email">{{email}}</span>
+
+        <nav>
+            <a href="/">Cerrar Sesion</a>
+            
+            <div class="contenedor">
+                
+                <div id="map"></div>
+                <div class="botones">
+                    <button class="entrada" id="btnAsistencia" onclick="alert('Entrada Registrada')">Registrar Entrada</button>
+                    <button class="entrada" id="btnSalida" >Registrar Salida</button>
+                </div>
+            </div>
+
+        </nav>
+
+        
+<script src="js/geolocalizacion.js"></script>
+        {{>footer}}

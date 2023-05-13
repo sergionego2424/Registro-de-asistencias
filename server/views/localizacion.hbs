@@ -1,0 +1,28 @@
+{{> header}}
+
+<script src="data.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZjRe8THSIemTT0xOxzuaoIBtSbvtvaVw&callback=initMap"
+    type="text/javascript"></script>
+<script src="js/map.js"></script>
+
+<div id="map"></div>
+
+<div class="body-content">
+    <div class="container">
+        <h2>Hola {{nombre}}, como estas?</h2>
+        <div class="ubi">
+            <m>Tu ubicación</m> <br />
+        </div>
+        <div class="btns">
+
+            <button id="btnAsistencia">Registrar Asistencia</button>
+        </div>
+        <p>Refrigeración, Climas y Mantenimiento de Coahuila</p>
+    </div>
+</div>
+
+
+<script src="js/geolocalizacion.js"></script>
+
+{{> footer}}

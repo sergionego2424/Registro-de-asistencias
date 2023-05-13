@@ -1,0 +1,31 @@
+{{> header}}
+<nav>
+    <a href="/">Regresar</a>
+</nav>
+<H1>Registro</H1>
+<div id="Formulario">
+    <form action="signup" method="post">
+
+        <label for="contraseña" required>CORREO</label>
+        <input type="text" id="correo" name="correo"><br>
+
+        <label for="contraseña" required>CONTRASEÑA</label>
+        <input type="password" id="contraseña" name="password1"><br>
+
+        <label for="contraseña" required>REPITA CONTRASEÑA</label>
+        <input type="password" id="contraseña" name="password2"><br>
+        <center>
+            <div class="error">
+                <p>{{error}}</p>
+            </div>
+             <div class="correcto">
+                        <p >{{correcto}}</p>
+                    </div>
+
+            <input type="submit" value="REGISTRARSE">
+    </form>
+
+
+    </center>
+</div>
+{{> footer}}

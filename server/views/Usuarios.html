@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="estilo.css"/>
+        <title>Usuarios</title>
+    </head>
+  
+  <style>
+      nav {
+          background-color: rgba(51, 51, 51, 0); /* Set the background color to transparent */
+          border-top: none;
+          padding-top: 50px;
+      }
+
+          nav ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              display: table;
+              width: 100%;
+              table-layout: fixed;
+              border-collapse: collapse;
+          }
+
+          nav li {
+              display: table-cell;
+              border-right: 1px solid #fff;
+              border-left: 1px solid #fff;
+              border-top: 1px solid #fff;
+              border-bottom: none;
+          }
+
+              nav li:last-child {
+                  border-right: none;
+              }
+
+              nav li a {
+                  display: block;
+                  color: #fff;
+                  text-align: center;
+                  padding: 10px;
+                  text-decoration: none;
+              }
+
+              nav li:hover {
+                  background-color: #fff;
+              }
+
+                  nav li:hover a {
+                      color: #333;
+                  }
+
+      .return-button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 10px;
+          padding: 10px;
+          background-color: rgba(51, 51, 51, 0); 
+          color: #fff;
+          text-decoration: none;
+          border: 1px solid #fff;
+          border-radius: 5px;
+      }
+
+          .return-button:hover {
+              background-color: #fff;
+              color: #333;
+          }
+      input[type="text"] {
+          padding: 5px;
+          border: 1px solid #fff;
+          border-radius: 5px 0 0 5px;
+          background-color: transparent;
+          color: #fff;
+          width: 375px; /* Updated width */
+      }
+
+</style>
+
+  <body>
+      <nav>
+          <ul>
+              <li><a href="RegistrarEmpleado.html">Registrar Empleado</a></li>
+              <li><a href="Empleados.html">Empleados</a></li>
+              <li><a href="Usuarios.html">Usuarios</a></li>
+              <li><a href="Asistencias.html">Asistencias</a></li>
+          </ul>
+      </nav>
+
+      <a href="AdministraciónInicio.html" class="return-button">Volver</a>
+
+      <div class="search-container">
+          <form>
+              <input type="text" placeholder="Usuario...">
+              <button type="submit">Buscar</button>
+          </form>
+      </div>
+      <div id="Formulario">
+          <form>
+              <label for="usuario">Usuario</label>
+              <input type="text" id="usuario" name="usuario"><br>
+
+              <label for="nowcontraseña">Contraseña Actual</label>
+              <input type="text" id="nowcontraseña" name="nowcontraseña"><br>
+
+              <label for="newcontraseña">Nueva Contraseña</label>
+              <input type="text" id="newcontraseña" name="newcontraseña"><br>
+              <center>
+                <input type="submit" value="ACTUALIZAR">
+              </center>
+          </form>
+      </div>
+
+  </body>
+</html>

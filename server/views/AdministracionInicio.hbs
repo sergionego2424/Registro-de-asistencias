@@ -1,0 +1,26 @@
+{{>header}}
+    <nav>
+        <a href="index.html">Regresar</a>
+    </nav>
+
+    <H1>ADMINISTRACIÓN</H1>
+    <div id="Formulario">
+        <form action="AdministracionInicio" method="post">
+            <label for="usuario">USUARIO</label>
+            <input type="text" id="usuario" name="usuario" value="juan1221"><br>
+
+            <label for="contraseña">CONTRASEÑA</label>
+            <input type="password" id="correo" name="password" value="juan091"><br>
+              <div class="error">
+                        <p >{{error}}</p>
+                    </div>
+            <center>
+                <button type="submit" >ENTRAR</button>
+            </center>
+        </form>
+
+      
+   
+    </div>
+
+    {{> footer}}
