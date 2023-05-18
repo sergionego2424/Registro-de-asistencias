@@ -8,6 +8,7 @@ window.onload = () => {
 }
 
 
+
 const listener = () => {
     const inputs = document.getElementsByClassName('input-search');
 

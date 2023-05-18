@@ -42,9 +42,11 @@ btnAsistencia.addEventListener('click', () => {
             hora: now
         }
 
-        console.log(result)
 
-        insertAsistencia("/asistencia",  result)
+
+        confirmarLugar(25.441923,-100.860815, result)
+
+        
     }, (error) => {
         console.log(error)
     });
@@ -66,7 +68,39 @@ btnSalida.addEventListener('click', () => {
         console.log(result)
 
         insertAsistencia("/salida",  result)
+
+        
     }, (error) => {
         console.log(error)
     });
 })
+
+    
+const confirmarLugar = (latEmpleado, lonEmpleado, result) => {
+    fetch('getLugares').then(response => {
+        return response.json()
+    }).then(data => {
+        for(let i = 0 ;  i< data[0].length ;  i++){
+            console.log("-------" + data[0][i].nombre + "--------")
+            console.log('------lat--------')
+            console.log(latEmpleado >= data[0][i].lat1 )
+            console.log(latEmpleado <= data[0][i].lat2 )
+
+            console.log('------lon--------')
+            console.log(lonEmpleado >=  data[0][i].lon2 )
+            console.log(lonEmpleado <=  data[0][i].lon1 )
+            if(latEmpleado >= data[0][i].lat1  &&  latEmpleado <= data[0][i].lat2){
+                if(lonEmpleado >= data[0][i].lon2 && lonEmpleado <= data[0][i].lon1){
+                    console.log(data[0][i].nombre)
+                    alert("Has registrado asistencia en " + data[0][i].nombre)
+                    insertAsistencia("/asistencia",  result)
+                }else{
+                    alert("No estas dentro de los limites permitidos")
+                    console.log("No estas dentro de los limites permitidos");
+                }
+            }
+        }
+    })
+    
+} 
+

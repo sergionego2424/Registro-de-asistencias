@@ -2,6 +2,7 @@ const {insertAsistencia, insertarSalida, getAsistencias} = require('../controlle
 const {inicioSesion,inicioSesionAdministrador} = require('../controller/inicioSesion');
 const {insertarEmpleadoNuevo, getListEmpleados, eliminarEmpleado, getEmpleadoById, updateEmpleado} = require('../controller/empleado');
 const {registrarse} = require('../controller/registrar')
+const {getLuagres} = require('../controller/lugares')
 
 const express = require('express');
 const router = express.Router()
@@ -181,6 +182,8 @@ router.get("/getAsistencias" , (req, res) => {
     getAsistencias(req, res, req.query)
 })
 
-
+router.get('/getLugares' , (req, res) => {
+    getLuagres(req, res)
+})
 
 module.exports = router;
